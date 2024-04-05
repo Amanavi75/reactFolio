@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import '../src/components/First'
+
 import First from '../src/components/First'
+
+
 
 
 function App() {
