@@ -7,9 +7,11 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 className='bg-green-300'> aman </h1>
-    </>
+    <div>
+      <div>
+        plan with Love
+      </div>
+    </div>
   )
 }
 
