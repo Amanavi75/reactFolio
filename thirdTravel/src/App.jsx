@@ -8,9 +8,8 @@ function App() {
 
   return (
     <div>
-      <div>
-        plan with Love
-      </div>
+      <h2>plan with love</h2>
+      <Tours></Tours>
     </div>
   )
 }
