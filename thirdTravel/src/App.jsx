@@ -25,6 +25,7 @@ const App = () => {
   return (
     <div className="App">
      {/* removeTour and tours data are passed as props in tours component */}
+     {/* even we can pass eventListner and props directly */}
       <Tours tours={tours} removeTour={removeTour}> </Tours>
     </div>
   );
