@@ -16,7 +16,7 @@ export const Cards = (props) => {
     {/*  extracted all the course data and added it into the allcourses array so that we can able to run the map function */}
 
   return (
-    <div>
+    <div className="flex flex-wrap justify-center gap-4 mb-4">
         {
             getCourses().map((course)=>{
                 return <Card  key={course.id} course={course}/>
