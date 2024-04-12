@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Testimonials } from './components/Testimonials'
+
+import reviews from './data'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -15,7 +17,7 @@ function App() {
         underline
       </div>
       <div>
-        <Testimonials/>
+        <Testimonials reviews = {reviews} />
       </div>
     </div>
   )
