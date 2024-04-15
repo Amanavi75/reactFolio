@@ -27,16 +27,19 @@ function App() {
          placeholder='firstName'
          onChange={changeHandler}
          firstName='firstName'
+         value={formData.firstName}
           />
         <input type="text"
          placeholder='LastName'
          onChange={changeHandler}
          name='lastName'
+         value={formData.lastName}
           />
         <input type="text"
          placeholder='pass'
          onChange={changeHandler}
          name='password'
+         value={formData.pass}
           />
       </form>
 
