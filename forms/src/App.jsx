@@ -4,9 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const[formData,setFormData] = useState({firstName:"", lastName:"",pass:""})
+  console.log(formData);
   function changeHandler ( event){
-    const[formData,setFormData] = useState({firstName:"", lastName:"",pass:""})
+    
     setFormData(prevFormdata=>{
      return {
       ...prevFormdata , 
@@ -15,7 +16,7 @@ function App() {
       // here we have name property which will save our previous state and further goes on 
      }
     })
-    console.log(event.target.name);
+    
     }
 
    
@@ -26,7 +27,7 @@ function App() {
         <input type="text"
          placeholder='firstName'
          onChange={changeHandler}
-         firstName='firstName'
+         name='firstName'
          value={formData.firstName}
           />
         <input type="text"
@@ -36,9 +37,9 @@ function App() {
          value={formData.lastName}
           />
         <input type="text"
-         placeholder='pass'
+         placeholder='password'
          onChange={changeHandler}
-         name='password'
+         name='pass'
          value={formData.pass}
           />
       </form>
