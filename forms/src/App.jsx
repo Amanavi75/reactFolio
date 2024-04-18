@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const[formData,setFormData] = useState({firstName:"", lastName:"",pass:""})
+  const[formData,setFormData] = useState({firstName:"", lastName:"",pass:"" ,check:true})
   console.log(formData);
   function changeHandler ( event){
     
@@ -42,6 +42,12 @@ function App() {
          name='pass'
          value={formData.pass}
           />
+          <input 
+          type="checkbox"
+           name="check" 
+           onChange={changeHandler}
+           checked={formData.check}
+           />
       </form>
 
       
