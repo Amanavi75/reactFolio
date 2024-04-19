@@ -13,11 +13,18 @@ const labs = () => {
    
 
   }
+
+  function oneBack(){
+    navigate(-1);
+
+  }
   return (
     <div>
       labs
 
       <button  onClick={clickHandler}> Move to About Page</button>
+
+      <button onClick={oneBack}>Gobaack </button>
       
       </div>
 
