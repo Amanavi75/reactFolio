@@ -1,7 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-function Signup() {
-  // Your Home component code here
+ const SIgnup = () => {
+  return (
+    <div>SIgnup</div>
+  )
 }
 
-export default Signup;
+export default SIgnup;

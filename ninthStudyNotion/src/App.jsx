@@ -9,10 +9,12 @@ import { Routes,Route } from 'react-router-dom'
 
 
 function App() {
+
+  const[isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
       <div>
-        <Navbar/>
+        <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         <Routes>
           <Route path="/" element= {<Home/>}/>
           <Route path="/login" element= {<Login/>}/>

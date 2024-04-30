@@ -1,7 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-function Dashboard() {
-  // Your Home component code here
+ const Dashboard = () => {
+  return (
+    <div>Dashboard</div>
+  )
 }
+
 
 export default Dashboard;
