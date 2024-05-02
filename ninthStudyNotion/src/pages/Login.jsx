@@ -25,7 +25,7 @@ import { Link } from 'react-router-dom';
     <label htmlFor="email">
       <p> email address <sub> *</sub></p>
 
-      <input type="text"
+      <input type="email"
        required 
        value={formData.email}  
        onChange={changeHandler} placeholder='enter email id'
