@@ -23,6 +23,7 @@ import React, { useState } from 'react'
       </div>
 
       <form action="">
+        <div>
         <label 
         >
           <p> first Name <sub>*</sub></p>
@@ -44,6 +45,25 @@ import React, { useState } from 'react'
            value={formData.lastName}
            />
         </label>
+
+        </div>
+
+        <label 
+        >
+          <p> Email address <sub>*</sub></p>
+          <input
+           type="email" 
+           name="email" 
+           onChange={changeHandler} placeholder='enter email address' 
+           value={formData.email}
+           />
+        </label>
+
+
+        
+        
+
+
       </form>
     </div>
   )
