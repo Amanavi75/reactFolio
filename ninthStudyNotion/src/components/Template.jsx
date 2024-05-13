@@ -1,7 +1,8 @@
 import React from 'react'
-import SIgnup from '../pages/SIgnup';
-import Login from '../pages/Login';
+import SignupForm from './SignupForm';
+import Login from './LoginForm';
 import frameImage from "../assets/frame.png"
+
 
  const Template = ({title, desc1, desc2,image , formtype,setIsLoggedIn}) => {
   return (
@@ -14,7 +15,7 @@ import frameImage from "../assets/frame.png"
             </p>
 
             {formtype === "signup" ? 
-            (<SIgnup/>):
+            (<SignupForm/>):
             (<Login/>)
             }
 
@@ -34,6 +35,7 @@ import frameImage from "../assets/frame.png"
             loading='laxy'
             />
             <img src={Image} alt="student" 
+            
             width={550}
             height={490}
             loading='laxy'
