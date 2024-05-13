@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
+import {AiOutlineEye , AiOutlineEyeInvisible} from "react-icons/ai";
 
  const SIgnup = () => {
   const [formData , setFormData] = useState({
     firstName:"", lastName:"" , email:"", password:"",confirmPassword:""
   })
+
+
+  const[showPassword , setShowPassword] = useState(false);
 
   function changeHandler(event){
     setFormData((prevData)=>(
@@ -59,11 +63,45 @@ import React, { useState } from 'react'
            />
         </label>
 
+        <div>
+        <label 
+        >
+          <p> create password <sub>*</sub></p>
+          <input
+           type={showPassword ? ("text"): ("password")}
+           name="password" 
+           onChange={changeHandler} placeholder='enter password' 
+           value={formData.password}
+           />
+
+          <span onClick={()=> setShowPassword((prev)=>!prev)}>
+            {showPassword ? (<AiOutlineEye/>):(<AiOutlineEyeInvisible/>  )}
+          </span>
+        </label>
+
+
+        <label 
+        >
+          <p> confirm password <sub>*</sub></p>
+          <input
+           type={showPassword ? ("text"): ("password")}
+           name="confirmPassword" 
+           onChange={changeHandler} placeholder='confirm password' 
+           value={formData.confirmPassword}
+           />
+
+          <span onClick={()=> setShowPassword((prev)=>!prev)}>
+            {showPassword ? (<AiOutlineEye/>):(<AiOutlineEyeInvisible/>  )}
+          </span>
+        </label>
+        </div>
+
+        <button>
+          create account
+        </button>
+
 
         
-        
-
-
       </form>
     </div>
   )
