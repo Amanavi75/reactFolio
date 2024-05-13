@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast';
 import {AiOutlineEye , AiOutlineEyeInvisible} from "react-icons/ai";
+import { useNavigate } from 'react-router-dom';
 
- const SignupForm= () => {
+ const SignupForm= ({setIsLoggedIn}) => {
   const [formData , setFormData] = useState({
     firstName:"", lastName:"" , email:"", password:"",confirmPassword:""
   })
+
+  const navigate = useNavigate();
 
 
   const[showPassword , setShowPassword] = useState(false);
@@ -19,6 +23,24 @@ import {AiOutlineEye , AiOutlineEyeInvisible} from "react-icons/ai";
     )
   )
   }
+
+  function submitHandler(e){
+    e.preventDefault();
+    if (formData.password != formData.confirmPassword) {
+      toast.error("Passwords do not match");
+      return;
+    }
+
+    setIsLoggedIn(true);
+    toast.success("Account Create");
+    const accountData = {
+      ...formData,
+    };
+    console.log(accountData);
+
+    navigate("/dashboard");
+
+  }
   return (
     <div>
       <div>
@@ -26,14 +48,14 @@ import {AiOutlineEye , AiOutlineEyeInvisible} from "react-icons/ai";
         <button>Instructor</button>
       </div>
 
-      <form action="">
+      <form onSubmit={submitHandler}>
         <div>
         <label 
         >
           <p> first Name <sub>*</sub></p>
           <input
            type="text" 
-           name="firstname" 
+           name="firstName" 
            onChange={changeHandler} placeholder='enter first name' 
            value={formData.firstName}
            id="firstName"
@@ -44,7 +66,7 @@ import {AiOutlineEye , AiOutlineEyeInvisible} from "react-icons/ai";
           <p> Last Name <sub>*</sub></p>
           <input
            type="text" 
-           name="lastname" 
+           name="lastName" 
            onChange={changeHandler} placeholder='enter last name' 
            value={formData.lastName}
            />

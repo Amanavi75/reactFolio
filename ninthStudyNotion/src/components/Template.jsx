@@ -1,7 +1,8 @@
 import React from 'react'
 import SignupForm from './SignupForm';
-import Login from './LoginForm';
+import LoginForm from './LoginForm';
 import frameImage from "../assets/frame.png"
+import signImg from "../assets/signup.png"
 
 
  const Template = ({title, desc1, desc2,image , formtype,setIsLoggedIn}) => {
@@ -15,8 +16,8 @@ import frameImage from "../assets/frame.png"
             </p>
 
             {formtype === "signup" ? 
-            (<SignupForm/>):
-            (<Login/>)
+            (<SignupForm setIsLoggedIn={setIsLoggedIn}/>):
+            (<LoginForm  setIsLoggedIn={setIsLoggedIn}/>)
             }
 
             <div>
@@ -34,7 +35,7 @@ import frameImage from "../assets/frame.png"
             height={504}
             loading='laxy'
             />
-            <img src={Image} alt="student" 
+            <img src={signImg} alt="student" 
             
             width={550}
             height={490}
