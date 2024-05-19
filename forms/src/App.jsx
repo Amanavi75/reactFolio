@@ -11,7 +11,7 @@ function App() {
     setFormData(prevFormdata=>{
      return {
       ...prevFormdata , 
-      [event.target.name] :event.target.value   
+      [event.target.name] :event.target.value   // this will use in creating any form   
       
       // here we have name property which will save our previous state and further goes on 
      }
