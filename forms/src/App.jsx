@@ -46,7 +46,7 @@ function App() {
           type="checkbox"
            name="check" 
            onChange={changeHandler}
-           checked={formData.check}
+           checked={formData.check} // 
            />
       </form>
 
